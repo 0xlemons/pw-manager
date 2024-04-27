@@ -16,11 +16,11 @@ import pyperclip
 
 sys.stdout = open(os.devnull, 'w')
 sys.stderr = open(os.devnull, 'w')
-master = '0k6dmzoNOaOTyARDpTGgVuWlnOuSRj62vH4aLY9Y3zk='
-private = b'\x03\x90\x9d\xb7B\xff_\x00i\x04d\xf7\xc7B\x81kn\xf7G\xed\x03\xcc\x1f!y\x95\xee\xc2t\x05\x0fL'
+master = 'add master fernet key here'
+private = b' add master hazmet key'
 app = Flask(__name__)
 
-app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+app.secret_key = b'choose a random key'
 
 def generate_key():
     return Fernet.generate_key()
