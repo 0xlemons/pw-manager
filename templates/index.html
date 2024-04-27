@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Manager</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #202020; /* Darker gray background */
+            font-family: Arial, sans-serif;
+        }
+        
+        .navbar {
+            background-color: #303030; /* Slightly lighter gray for navbar */
+            overflow: hidden;
+            text-align: center; /* Center align the navbar */
+            padding: 10px 0; /* Add padding to top and bottom */
+        }
+        
+        .navbar a {
+            display: inline-block; /* Display buttons inline */
+            color: #fff; /* White text color for buttons */
+            padding: 10px; /* Add padding to buttons */
+            text-decoration: none; /* Remove underline from buttons */
+            font-size: 24px; /* Adjust font size */
+        }
+        
+        .navbar a:hover {
+            background-color: #555; /* Darker shade on hover */
+        }
+        
+        form {
+            background-color: #303030; /* Slightly lighter gray for form */
+            padding: 20px;
+            border-radius: 15px; /* Rounded corners for form */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            text-align: center;
+            max-width: 300px; /* Limit form width for better readability */
+            margin: 50px auto 0; /* Center horizontally and add top margin */
+        }
+
+        h2 {
+            color: #fff; /* White text color for heading */
+            margin-top: 20px; /* Add top margin to heading */
+        }
+
+        label {
+            color: #dda0dd; /* Lavender accent color for labels */
+        }
+
+        input[type="password"],
+        input[type="text"] {
+            width: calc(100% - 22px); /* Adjusted width to center the input */
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px; /* Rounded corners for input */
+            border: 1px solid #ccc;
+            background-color: #f5f5f5; /* Light gray background for input */
+            color: #202020; /* Dark gray text color */
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px; /* Rounded corners for submit button */
+            border: none;
+            background-color: #dda0dd; /* Lavender accent color for button */
+            color: #fff; /* White text color */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #b886bb; /* Darker shade of lavender on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#"><img src="{{url_for('static', filename='crypto.png')}}" alt="Image 1" style="height: 1em; width: auto;"></a>
+        <a href="/password_list"><img src="{{url_for('static', filename='enc.png')}}" alt="Image 2" style="height: 1em; width: auto;"></a>
+    </div>    
+
+    <h2></h2>
+    <form method="post" action="/save_credentials">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <label for="website">Website Link:</label>
+        <input type="text" id="website" name="website" required>
+        <br>
+        <input type="submit" value="Save Credentials">
+    </form>
+</body>
+</html>

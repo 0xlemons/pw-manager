@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #202020; /* Darker gray background */
+            font-family: Arial, sans-serif;
+        }
+        
+        form {
+            background-color: #303030; /* Slightly lighter gray for form */
+            padding: 20px;
+            border-radius: 15px; /* Rounded corners for form */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            text-align: center;
+            max-width: 300px; /* Limit form width for better readability */
+            margin: 100px auto 0; /* Center horizontally and add top margin */
+        }
+
+        h2 {
+            color: #fff; /* White text color for heading */
+            margin-top: 20px; /* Add top margin to heading */
+        }
+
+        label {
+            color: #dda0dd; /* Lavender accent color for labels */
+        }
+
+        input[type="password"] {
+            width: calc(100% - 22px); /* Adjusted width to center the input */
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px; /* Rounded corners for input */
+            border: 1px solid #ccc;
+            background-color: #f5f5f5; /* Light gray background for input */
+            color: #202020; /* Dark gray text color */
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px; /* Rounded corners for submit button */
+            border: none;
+            background-color: #dda0dd; /* Lavender accent color for button */
+            color: #fff; /* White text color */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #b886bb; /* Darker shade of lavender on hover */
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="/login">
+        <h2>Login</h2> <!-- Login at the top -->
+        <label for="password">Enter your password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
