@@ -14,8 +14,12 @@ from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.backends import default_backend
 import pyperclip
 
+
+# hides consol messages
 sys.stdout = open(os.devnull, 'w')
 sys.stderr = open(os.devnull, 'w')
+
+
 master = 'add master fernet key here'
 private = b' add master hazmet key'
 app = Flask(__name__)
