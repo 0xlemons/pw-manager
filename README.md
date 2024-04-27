@@ -3,6 +3,8 @@ simple pw manager with a UI, uses hazmat and fernet encryption.
 
 Just something i made in my free time, I know it could be more secure.
 
+only tested on windows
+
 # Usage
 
 When running for first time it will ask you to set a one time password, set that password and it will create a password.pk1 file within Appdata/Local/LemonPW/LemonPW/LemonPW, the password will be encrypted with the master fernet key you set (will add a function to generate one later).
